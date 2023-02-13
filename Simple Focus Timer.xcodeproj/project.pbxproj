@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EB23BDE299AB59300993E9A /* EventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23BDD299AB59300993E9A /* EventStorage.swift */; };
+		7EB23BE1299AB7DA00993E9A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23BE0299AB7DA00993E9A /* Date+Extension.swift */; };
+		7EB23BE5299AD34400993E9A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23BE4299AD34400993E9A /* AlertView.swift */; };
 		7EDFA34829977BFA008EEB41 /* StatusBarJobTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDFA34729977BFA008EEB41 /* StatusBarJobTimerApp.swift */; };
 		7EDFA34A29977BFA008EEB41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDFA34929977BFA008EEB41 /* ContentView.swift */; };
 		7EDFA34C29977BFC008EEB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDFA34B29977BFC008EEB41 /* Assets.xcassets */; };
@@ -16,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EB23BDD299AB59300993E9A /* EventStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStorage.swift; sourceTree = "<group>"; };
+		7EB23BE0299AB7DA00993E9A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		7EB23BE2299ACFC200993E9A /* Simple-Focus-Timer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Simple-Focus-Timer-Info.plist"; sourceTree = "<group>"; };
+		7EB23BE4299AD34400993E9A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		7EDFA34429977BF9008EEB41 /* Simple Focus Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Focus Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDFA34729977BFA008EEB41 /* StatusBarJobTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarJobTimerApp.swift; sourceTree = "<group>"; };
 		7EDFA34929977BFA008EEB41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,9 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EB23BDC299AB58100993E9A /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				7EB23BDD299AB59300993E9A /* EventStorage.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		7EB23BDF299AB7C900993E9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EB23BE0299AB7DA00993E9A /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7EB23BE3299AD33300993E9A /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				7EB23BE4299AD34400993E9A /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		7EDFA33B29977BF9008EEB41 = {
 			isa = PBXGroup;
 			children = (
+				7EB23BE2299ACFC200993E9A /* Simple-Focus-Timer-Info.plist */,
 				7EDFA34629977BF9008EEB41 /* StatusBarJobTimer */,
 				7EDFA34529977BF9008EEB41 /* Products */,
 			);
@@ -56,6 +88,9 @@
 		7EDFA34629977BF9008EEB41 /* StatusBarJobTimer */ = {
 			isa = PBXGroup;
 			children = (
+				7EB23BE3299AD33300993E9A /* AlertView */,
+				7EB23BDF299AB7C900993E9A /* Extensions */,
+				7EB23BDC299AB58100993E9A /* Events */,
 				7EDFA34729977BFA008EEB41 /* StatusBarJobTimerApp.swift */,
 				7EDFA34929977BFA008EEB41 /* ContentView.swift */,
 				7EDFA3562997DFA6008EEB41 /* ContentViewModel.swift */,
@@ -146,9 +181,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDFA3592997FCC3008EEB41 /* LocalNotificationService.swift in Sources */,
+				7EB23BDE299AB59300993E9A /* EventStorage.swift in Sources */,
+				7EB23BE5299AD34400993E9A /* AlertView.swift in Sources */,
 				7EDFA34A29977BFA008EEB41 /* ContentView.swift in Sources */,
 				7EDFA34829977BFA008EEB41 /* StatusBarJobTimerApp.swift in Sources */,
 				7EDFA3572997DFA6008EEB41 /* ContentViewModel.swift in Sources */,
+				7EB23BE1299AB7DA00993E9A /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +322,11 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Simple-Focus-Timer-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Focus Timer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Чтобы определить время окончания таймера, если в календаре есть встреча";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,9 +357,11 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Simple-Focus-Timer-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Focus Timer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Чтобы определить время окончания таймера, если в календаре есть встреча";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

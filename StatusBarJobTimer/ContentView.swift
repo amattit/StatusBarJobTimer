@@ -38,15 +38,17 @@ struct ContentView: View {
             }
         case .stop:
             HStack {
-                Stepper("Время работы (в минутах)", value: $viewModel.workTime, step: 15)
+                Stepper("Продолжительность работы", value: $viewModel.workTime, step: 1)
                 Spacer()
                 Text(viewModel.workTime.formatted())
+                Text("мин")
             }
             
             HStack {
-                Stepper("Время отдыха (в минутах)", value: $viewModel.pauseTime, step: 15)
+                Stepper("Продолжительность отдыха", value: $viewModel.pauseTime, step: 1)
                 Spacer()
                 Text(viewModel.pauseTime.formatted())
+                Text("мин")
             }
             
             playView

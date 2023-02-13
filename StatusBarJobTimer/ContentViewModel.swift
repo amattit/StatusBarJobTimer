@@ -20,8 +20,11 @@ final class ContentViewModel: ObservableObject {
     
     var settings = TimerSettings()
     
+    let popupPublisher = PassthroughSubject<PopupType, Never>()
+    
     private var disposables = Set<AnyCancellable>()
     private var notificationService = LocalNotificationService()
+    private let eventStorage = EventStorage()
     
     init() {
         self.setRemainingTime()
@@ -29,11 +32,30 @@ final class ContentViewModel: ObservableObject {
         pauseTime = settings.pauseTime
         notificationService.requestAuth()
         bind()
+        Task {
+            do {
+                try await eventStorage.checkAuthorization()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func start() {
-        state = .play
-        notificationService.addNotification(.pauseAt(remaining))
+        Task { @MainActor in
+            let date = Date()
+            if let event = await eventStorage.isStartEventItTimeInterval(interval: .init(start: date, duration: remaining)) {
+                let diff = event.startDate.timeIntervalSinceReferenceDate - date.timeIntervalSinceReferenceDate
+                if diff > 0 && remaining > diff {
+                    popupPublisher.send(.pause("Скоро встреча!\n\(event.title)"))
+                    remaining = diff
+                } else {
+                    popupPublisher.send(.pause("Встреча!\n\(event.title)"))
+                }
+            }
+            notificationService.addNotification(.pauseAt(remaining))
+            state = .play
+        }
     }
     
     func pause() {
@@ -54,6 +76,7 @@ final class ContentViewModel: ObservableObject {
             self.remaining -= 1
             if self.remaining == 0 {
                 self.state = .stop
+                self.popupPublisher.send(.pause("Пора отдохнуть"))
                 self.setRemainingTime()
                 self.notificationService.addNotification(.resumeAt(TimeInterval(self.settings.pauseTime * 60)))
             }

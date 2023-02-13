@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7EDFA34429977BF9008EEB41 /* StatusBarJobTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusBarJobTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDFA34429977BF9008EEB41 /* Simple Focus Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Focus Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDFA34729977BFA008EEB41 /* StatusBarJobTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarJobTimerApp.swift; sourceTree = "<group>"; };
 		7EDFA34929977BFA008EEB41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7EDFA34B29977BFC008EEB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		7EDFA34529977BF9008EEB41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7EDFA34429977BF9008EEB41 /* StatusBarJobTimer.app */,
+				7EDFA34429977BF9008EEB41 /* Simple Focus Timer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7EDFA34329977BF9008EEB41 /* StatusBarJobTimer */ = {
+		7EDFA34329977BF9008EEB41 /* Simple Focus Timer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EDFA35329977BFC008EEB41 /* Build configuration list for PBXNativeTarget "StatusBarJobTimer" */;
+			buildConfigurationList = 7EDFA35329977BFC008EEB41 /* Build configuration list for PBXNativeTarget "Simple Focus Timer" */;
 			buildPhases = (
 				7EDFA34029977BF9008EEB41 /* Sources */,
 				7EDFA34129977BF9008EEB41 /* Frameworks */,
@@ -90,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = StatusBarJobTimer;
+			name = "Simple Focus Timer";
 			productName = StatusBarJobTimer;
-			productReference = 7EDFA34429977BF9008EEB41 /* StatusBarJobTimer.app */;
+			productReference = 7EDFA34429977BF9008EEB41 /* Simple Focus Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7EDFA33F29977BF9008EEB41 /* Build configuration list for PBXProject "StatusBarJobTimer" */;
+			buildConfigurationList = 7EDFA33F29977BF9008EEB41 /* Build configuration list for PBXProject "Simple Focus Timer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7EDFA34329977BF9008EEB41 /* StatusBarJobTimer */,
+				7EDFA34329977BF9008EEB41 /* Simple Focus Timer */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Focus Timer";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Focus Timer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -317,7 +317,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Focus Timer";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Focus Timer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -337,7 +337,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7EDFA33F29977BF9008EEB41 /* Build configuration list for PBXProject "StatusBarJobTimer" */ = {
+		7EDFA33F29977BF9008EEB41 /* Build configuration list for PBXProject "Simple Focus Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EDFA35129977BFC008EEB41 /* Debug */,
@@ -346,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EDFA35329977BFC008EEB41 /* Build configuration list for PBXNativeTarget "StatusBarJobTimer" */ = {
+		7EDFA35329977BFC008EEB41 /* Build configuration list for PBXNativeTarget "Simple Focus Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EDFA35429977BFC008EEB41 /* Debug */,
